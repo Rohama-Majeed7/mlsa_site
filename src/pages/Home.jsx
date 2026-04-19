@@ -45,12 +45,14 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="max-w-xl text-center mb-6"
         >
-          Building a more connected and collaborative tech community. Bridging the gap between technology and society.
+MLSA UETT is a student community at UET Taxila focused on exploring Microsoft technologies and promoting personal and collective growth. It brings together Microsoft-selected ambassadors to collaborate on impactful initiatives for the local community. Through teamwork, members achieve more together than they could individually, unlocking greater opportunities and innovation.
+
         </motion.p>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[#55B4F3] text-[#010E1B] px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
+          className="bg-[#55B4F3] cursor-pointer text-[#010E1B] px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
+        onClick={() => navigate("events")}
         >
           Explore Events
         </motion.button>
@@ -137,7 +139,7 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/team")}
-            className="mt-10 px-6 py-3 bg-[#55B4F3] text-[#010E1B] font-semibold rounded-lg shadow-lg hover:shadow-2xl transition"
+            className="mt-10 cursor-pointer px-6 py-3 bg-[#55B4F3] text-[#010E1B] font-semibold rounded-lg shadow-lg hover:shadow-2xl transition"
           >
             View All Team Members
           </motion.button>

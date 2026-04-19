@@ -2,12 +2,29 @@ import { motion } from "framer-motion";
 
 // Reuse the same coreTeam array or import from a separate file
 const coreTeam = [
-  { name: "Ali Khan", role: "President", img: "https://via.placeholder.com/150" },
-  { name: "Sara Malik", role: "Tech Lead", img: "https://via.placeholder.com/150" },
-  { name: "Hassan Ahmed", role: "Community Lead", img: "https://via.placeholder.com/150" },
-  { name: "Ayesha Khan", role: "Marketing Lead", img: "https://via.placeholder.com/150" },
-  { name: "Omar Farooq", role: "Event Lead", img: "https://via.placeholder.com/150" },
-  // Add more members here
+  { name: "Hamza Shaukat", role: "Lead", img: "https://via.placeholder.com/150" },
+  { name: "Maryam", role: "Community Manager", img: "https://via.placeholder.com/150" },
+  { name: "Azka", role: "Co-Lead", img: "https://via.placeholder.com/150" },
+  { name: "Wajeeha", role: "Graphics Lead", img: "https://via.placeholder.com/150" },
+  { name: "Nimra", role: "Content Lead", img: "https://via.placeholder.com/150" },
+  { name: "Saleh", role: "Photography Lead", img: "https://via.placeholder.com/150" },
+  { name: "Momina", role: "Videography Lead", img: "https://via.placeholder.com/150" },
+  { name: "Sarah", role: "Marketing Lead", img: "https://via.placeholder.com/150" },
+
+  { name: "Abdur Rafay", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Ahmad Zafar", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Zile Huma", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Ayesha Naveed", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Hifza Eman", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Ali Usman", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Yumna Chaudhry", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Laiba", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Maryam Sarfraz", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+
+  { name: "Hamza Sajid", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Moazam", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "M. Ahmad", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Hamza Iftikhar", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
 ];
 
 export default function Team() {
