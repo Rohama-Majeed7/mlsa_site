@@ -1,38 +1,87 @@
 import { motion } from "framer-motion";
+import { img } from "framer-motion/m";
 
 // Sample events with images
 const events = [
   {
+    title: "Azure AI Challenge 3",
+    description:
+      "Elevate your AI skills with the MLSA-UETT Azure AI Skills Challenge. Complete modules to win LinkedIn Premium, Xbox vouchers, and earn trophies and badges.",
+    img: "src/assets/events/azure-challenge.jpg"
+  },
+  {
+    title: "Core Team Inductions",
+    description:
+      "After extensive interviews across campus, MLSA UETT proudly announces the Core Team for 2023–2024, recognizing outstanding student ambassadors.",
+    img: "src/assets/events/team-inductions.jpg"
+  },
+  {
+    title: "MLSA UETT Orientation",
+    description:
+      "The official orientation held on 1st March 2023 at the Software Engineering Department, UET Taxila, introducing students to the Microsoft Learn Student Ambassador program.",
+    img: "src/assets/events/mlsa-orientation.jpg"
+  },
+  {
+    title: "Introduction to Quantum Computing",
+    description:
+      "Dive into Quantum Computing with Beta MLSA Nadeem Akhter from Kardan University, Afghanistan. Learn core concepts and future applications.",
+    img: "src/assets/events/intro-cloud-computing.jpg"
+  },
+
+  {
     title: "Introduction to Azure Fundamentals",
-    description: "Discover Azure fundamentals with our Beta Ambassador. Join us for an enlightening session on the essentials of Azure.",
-    img: "/images/azure-fundamentals.jpg"
+    description:
+      "Learn the basics of Azure including cloud computing concepts, core Azure services, and real-world applications with expert ambassadors.",
+    img: "src/assets/events/azure-fund.jpg"
   },
   {
-    title: "Azure and its uses",
-    description: "Diving into the world of Cloud with Microsoft Azure. Newly selected ambassador Laiba Maryam initiates her journey with MLSA-UETT.",
-    img: "/images/azure-cloud.jpg"
-  },
-  {
-    title: "LeadHers",
-    description: "Forget the stereotypes, it's time to Rewrite The Code! LeadHers is where tech-savvy women unite to learn, collaborate, and conquer the digital frontier.",
-    img: "/images/leadhers.jpg"
+    title: "LeadHer",
+    description:
+      "Rewrite the code with LeadHers — empowering women in tech to learn, collaborate, and lead the digital revolution through hands-on sessions.",
+    img: "src/assets/events/leadher.jpg"
   },
   {
     title: "Secure The Cloud",
-    description: "Safety, assurance and surveillance: Be part of discovering cloud safety approaches and hands-on demos with GCP, Azure, and AWS.",
-    img: "/images/secure-cloud.jpg"
+    description:
+      "Explore cloud security practices across Azure, AWS, and GCP with live demos focused on data protection, safety, and surveillance systems.",
+    img: "src/assets/events/secure-cloud.jpg"
+  },
+  {
+    title: "Azure and Its Uses",
+    description:
+      "A beginner-friendly session introducing Microsoft Azure and cloud computing, hosted by MLSA ambassadors to guide students into cloud technologies.",
+    img: "src/assets/events/azure-uses.jpg"
+  }, {
+    title: "LeadHer with MLSA Gold",
+    description: "Unleash the Power Within: Mastering the Microsoft Platform with LeadHers! Hosting MLSA Gold, Neha Hafeez. Get hands-on with expert-led sessions that'll unlock the full potential of the Microsoft Platform and boost your career.",
+    img: "src/assets/events/leadherd.jpg",
+  },
+  {
+    title: "Machine Learning with Microsoft Employee",
+    description: "MLSU-UETT successfully conducted an immersive session on August 5th, 2023, titled 'IML 1.1: Introduction to Machine Learning, with Mr. Omar Barakat, ML Engineer at Microsoft, Cairo, Egypt.",
+    img: "src/assets/events/ml.jpg",
   },
   {
     title: "Unlocking Opportunities Abroad",
-    description: "Join a transformative journey with MLSA Ambassador Wajeeha Usman and Dr. Zafar Shahid on innovation, education, and entrepreneurship.",
-    img: "/images/opportunities-abroad.jpg"
+    description: "Join us on a transformative journey where innovation, education, and entrepreneurship converge in an enlightening event hosted by our MLSA Ambassador, Wajeeha Usman. We'll be hosting Dr. Zafar Shahid, a renowned industry and academia expert who has previously served as the Technical Lead at Meta and Nvidia.",
+    img: "src/assets/events/opprt.jpg",
+  },
+  {
+    title: "HactoberFest 23",
+    description: "Conducted on October 25th, 2023 MLSA-UETT's vibrant session on open-source contributions featuring speakers Kiran Amin Panjwani and Arsalan Khattak. Empowering students to connect, collaborate, and contribute to the global open-source community",
+    img: "src/assets/events/hactpbert.png",
+  },
+  {
+    title: "Azure Fundamentals Challenge",
+    description: "Complete the Azure Fundamentals Challenge by October 21, and win Linkedin premium and exciting awards.",
+    img: "src/assets/events/challenge.jpg",
   }
 ];
 
 export default function Events() {
   return (
     <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] px-6 py-16">
-      
+
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

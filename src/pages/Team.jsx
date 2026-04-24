@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
 
 // Reuse the same coreTeam array or import from a separate file
-const coreTeam = [
-  { name: "Hamza Shaukat", role: "Lead", img: "https://via.placeholder.com/150" },
-  { name: "Maryam", role: "Community Manager", img: "https://via.placeholder.com/150" },
-  { name: "Azka", role: "Co-Lead", img: "https://via.placeholder.com/150" },
-  { name: "Wajeeha", role: "Graphics Lead", img: "https://via.placeholder.com/150" },
-  { name: "Nimra", role: "Content Lead", img: "https://via.placeholder.com/150" },
-  { name: "Saleh", role: "Photography Lead", img: "https://via.placeholder.com/150" },
-  { name: "Momina", role: "Videography Lead", img: "https://via.placeholder.com/150" },
-  { name: "Sarah", role: "Marketing Lead", img: "https://via.placeholder.com/150" },
+export const coreTeam = [
+  { name: "Hamza Shaukat", role: "Lead", img: "src/assets/team/hamza.jpg" },
+  { name: "Maryam", role: "Community Manager", img: "src/assets/team/mariyam.jpg" },
+  { name: "Azka", role: "Co-Lead", img: "src/assets/team/azka.jpg" },
+  { name: "Wajeeha", role: "Graphics Lead", img: "src/assets/team/wajeeha.jpg" },
+  { name: "Nimra", role: "Content Lead", img: "src/assets/team/nimra.jpg" },
+  { name: "Saleh", role: "Photography Lead", img: "src/assets/team/saleh.jpg" },
+  { name: "Momina", role: "Videography Lead", img: "src/assets/team/monima.jpg" },
+  { name: "Sarah", role: "Marketing Lead", img: "src/assets/team/sarah.jpg" },
 
-  { name: "Abdur Rafay", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Ahmad Zafar", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Zile Huma", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Ayesha Naveed", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Hifza Eman", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Ali Usman", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Yumna Chaudhry", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Laiba", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Maryam Sarfraz", role: "Alpha Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Abdur Rafay", role: "Alpha Ambassador", img: "src/assets/team/abdul rafay.jpg" },
+  { name: "Ahmad Zafar", role: "Alpha Ambassador", img: "src/assets/team/ahmed-zafar.jpg" },
+  { name: "Zile Huma", role: "Alpha Ambassador", img: "src/assets/team/huma.jpg" },
+  { name: "Ayesha Naveed", role: "Alpha Ambassador", img: "src/assets/team/ayesha.jpg" },
+  { name: "Hifza Eman", role: "Alpha Ambassador", img: "src/assets/team/ifza.jpg" },
+  { name: "Ali Usman", role: "Alpha Ambassador", img: "src/assets/team/ali usman.jpg" },
+  { name: "Yumna Chaudhry", role: "Alpha Ambassador", img: "src/assets/team/umna.jpg" },
+  { name: "Laiba", role: "Alpha Ambassador", img: "src/assets/team/laiba.jpg" },
+  { name: "Maryam Sarfraz", role: "Alpha Ambassador", img: "src/assets/team/maryam sarfraz.jpg" },
 
-  { name: "Hamza Sajid", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Moazam", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "M. Ahmad", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
-  { name: "Hamza Iftikhar", role: "Beta Ambassador", img: "https://via.placeholder.com/150" },
+  { name: "Hamza Sajid", role: "Beta Ambassador", img: "src/assets/team/hamza sajid.jpg" },
+  { name: "Moazam", role: "Beta Ambassador", img: "src/assets/team/moazam.jpg" },
+  { name: "M. Ahmad", role: "Beta Ambassador", img: "src/assets/team/ahmed.jpg" },
+  { name: "Hamza Iftikhar", role: "Beta Ambassador", img: "src/assets/team/hamza ifthikar.jpg" },
 ];
 
 export default function Team() {
@@ -45,12 +45,12 @@ export default function Team() {
           <motion.div
             key={idx}
             whileHover={{ scale: 1.05 }}
-            className="bg-[#021529] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition flex flex-col items-center"
+            className="bg-[#021529] cursor-pointer border border-[#55B4F3] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition flex flex-col items-center"
           >
             <img
               src={member.img}
               alt={member.name}
-              className="w-32 h-32 rounded-full mb-4 object-cover border-4 border-[#55B4F3]"
+              className="w-50 h-50 rounded-2xl mb-4 object-cover border-2 border-[#55B4F3]"
             />
             <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
             <p className="text-[#E1EFFD]/80">{member.role}</p>

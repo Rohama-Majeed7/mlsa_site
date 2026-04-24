@@ -12,9 +12,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide text-[#55B4F3]"
+          className=""
         >
-          MLSA UET Taxila
+          <img src="src/assets/logo.png" alt="Logo" className="h-8 sm:h-10 md:h-16 " />
         </Link>
 
         {/* Desktop Links */}
