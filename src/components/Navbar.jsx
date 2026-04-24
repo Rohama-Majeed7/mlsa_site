@@ -23,12 +23,12 @@ export default function Navbar() {
           <NavLink to="/events">Events</NavLink>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <Link
+          {/* <Link
             to="/login"
             className="px-3 sm:px-4 py-2 rounded-full bg-[#55B4F3] text-[#010E1B] font-semibold shadow-md hover:shadow-xl hover:scale-105 transition"
           >
             Login
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile Toggle Button */}

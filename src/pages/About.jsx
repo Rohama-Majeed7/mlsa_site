@@ -39,7 +39,7 @@ export default function About() {
         community.
       </p>
 
-      <button onClick={() => window.location.href = "/signup"} className="px-8 py-3 bg-[#55B4F3] cursor-pointer text-[#010E1B] font-semibold rounded-full shadow-lg hover:scale-105 transition">
+      <button onClick={() => window.location.href = "/join"} className="px-8 py-3 bg-[#55B4F3] cursor-pointer text-[#010E1B] font-semibold rounded-full shadow-lg hover:scale-105 transition">
         Join Our Community
       </button>
     </div>

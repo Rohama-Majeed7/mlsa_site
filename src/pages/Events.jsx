@@ -2,7 +2,22 @@ import { motion } from "framer-motion";
 import { img } from "framer-motion/m";
 
 // Sample events with images
-const events = [
+export const events = [
+  {
+    title: "Hacktoberfest-2024 (October-2024)",
+    description:"MLSA-UETT organized Hacktoberfest 2024, featuring a series of sessions focused on open-source contributions, Git/GitHub skills, and making impactful pull requests. Students also learned about engaging with the MLSA community and received career guidance from a Microsoft expert on emerging technologies. The event concluded with certificates and swag distributed to participants and volunteers.",
+    img: "src/assets/events/hactobertfest.jpg"
+  },
+  {
+    title: "OpenHouse and Job Fair, 2025",
+    description:"The Open House and Job Fair 2025 at UET Taxila, organized with MLSA and GDSC, provided a platform for final-year students to showcase 35 innovative projects across domains like AI, cybersecurity, and cloud computing. Industry professionals interacted with students, offering feedback and career opportunities including internships and jobs. The event strengthened academia-industry collaboration and highlighted the department’s commitment to student growth and professional development.",
+    img: "src/assets/events/openhouse.jpg"
+  },
+  {
+    title: "HackXila2025 (May-2025)",
+    description:"HackXila 2025 was a student-led hackathon by MLSA UETT and GDSC that brought together participants from multiple universities to compete in innovation-driven challenges like Hack Idea, Prompt Engineering, Quiz, and Speed Typing. The event showcased creativity, teamwork, and technical skills, with expert judges evaluating projects and PKR 34,000 awarded in prizes. It served as a major platform for collaboration, talent recognition, and student empowerment in tech.",
+    img: "src/assets/events/hackxila.jpg"
+  },
   {
     title: "Azure AI Challenge 3",
     description:

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import { coreTeam } from "./Team";
+import { events } from "./Events"; // adjust path if needed
 // Core Team Sample Data
 
 const offers = [
@@ -46,13 +47,11 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#55B4F3] cursor-pointer text-[#010E1B] px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
-          onClick={() => navigate("events")}
+          onClick={() => navigate("join")}
         >
-          Explore Events
+          Join Us
         </motion.button>
       </section>
-
-
       {/* What We Offer */}
       <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
@@ -99,7 +98,68 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      {/* Latest Events */}
+      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto text-center"
+        >
+          <h2 className="text-4xl font-bold text-[#55B4F3] mb-12">
+            Latest Events
+          </h2>
 
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {events.slice(0, 3).map((event, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                className="bg-[#021529] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer flex flex-col"
+              >
+                {/* Image */}
+                <img
+                  src={event.img}
+                  alt={event.title}
+                  className="h-48 w-full object-cover"
+                />
+
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold mb-2 text-[#55B4F3]">
+                    {event.title}
+                  </h3>
+
+                  <p className="text-[#E1EFFD]/80 text-sm flex-grow">
+                    {event.description.length > 100
+                      ? event.description.slice(0, 100) + "..."
+                      : event.description}
+                  </p>
+
+                  {/* Button */}
+                  <button
+                    onClick={() => navigate("/events")}
+                    className="mt-4 text-sm cursor-pointer font-medium text-[#55B4F3] hover:underline"
+                  >
+                    Learn More →
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* View All Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/events")}
+            className="mt-12 cursor-pointer px-6 py-3 bg-[#55B4F3] text-[#010E1B] font-semibold rounded-lg shadow-lg hover:shadow-2xl transition"
+          >
+            View All Events
+          </motion.button>
+        </motion.div>
+      </section>
       {/* Core Team (only 3 members) */}
       <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
