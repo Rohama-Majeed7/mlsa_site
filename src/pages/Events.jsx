@@ -95,7 +95,7 @@ export const events = [
 
 export default function Events() {
   return (
-    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] px-6 py-16">
+    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-4 py-16">
 
       {/* Heading */}
       <motion.h1

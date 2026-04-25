@@ -53,7 +53,7 @@ export default function Home() {
         </motion.button>
       </section>
       {/* What We Offer */}
-      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Latest Events */}
-      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Core Team (only 3 members) */}
-      <section className="py-20 px-6 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

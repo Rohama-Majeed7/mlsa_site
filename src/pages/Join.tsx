@@ -3,7 +3,7 @@ import { Users, Calendar, BookOpen, Trophy } from "lucide-react";
 
 export default function Join() {
   return (
-    <div className="bg-[#010E1B] text-[#E1EFFD] sm:mt-[30px] min-h-screen px-6 sm:px-12 lg:px-24 py-24">
+    <div className="bg-[#010E1B] text-[#E1EFFD] sm:mt-[30px] min-h-screen sm:px-6 px-4 sm:px-12 lg:px-24 py-24">
 
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-20">

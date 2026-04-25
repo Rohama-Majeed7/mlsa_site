@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] px-6 py-16 flex flex-col">
+    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-3 py-16 flex flex-col">
 
       {/* Heading Section */}
       <motion.div
@@ -32,7 +32,7 @@ export default function Contact() {
       >
         {/* Contact Form */}
         <motion.form
-          className="flex-1 bg-[#021529] p-8 rounded-2xl shadow-lg w-full max-w-md"
+          className="flex-1 bg-[#021529] sm:p-8 p-3 rounded-2xl shadow-lg w-full max-w-md"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}

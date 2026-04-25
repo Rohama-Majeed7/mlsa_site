@@ -2,40 +2,23 @@ import { motion } from "framer-motion";
 
 // Reuse the same coreTeam array or import from a separate file
 export const coreTeam = [
-  { name: "Hamza Shaukat", role: "Lead", img: "src/assets/team/hamza.jpg" },
-  { name: "Maryam", role: "Community Manager", img: "src/assets/team/mariyam.jpg" },
-  { name: "Azka", role: "Co-Lead", img: "src/assets/team/azka.jpg" },
-  { name: "Wajeeha", role: "Graphics Lead", img: "src/assets/team/wajeeha.jpg" },
-  { name: "Nimra", role: "Content Lead", img: "src/assets/team/nimra.jpg" },
-  { name: "Saleh", role: "Photography Lead", img: "src/assets/team/saleh.jpg" },
-  { name: "Momina", role: "Videography Lead", img: "src/assets/team/monima.jpg" },
-  { name: "Sarah", role: "Marketing Lead", img: "src/assets/team/sarah.jpg" },
-
-  { name: "Abdur Rafay", role: "Alpha Ambassador", img: "src/assets/team/abdul rafay.jpg" },
-  { name: "Ahmad Zafar", role: "Alpha Ambassador", img: "src/assets/team/ahmed-zafar.jpg" },
-  { name: "Zile Huma", role: "Alpha Ambassador", img: "src/assets/team/huma.jpg" },
-  { name: "Ayesha Naveed", role: "Alpha Ambassador", img: "src/assets/team/ayesha.jpg" },
-  { name: "Hifza Eman", role: "Alpha Ambassador", img: "src/assets/team/ifza.jpg" },
-  { name: "Ali Usman", role: "Alpha Ambassador", img: "src/assets/team/ali usman.jpg" },
-  { name: "Yumna Chaudhry", role: "Alpha Ambassador", img: "src/assets/team/umna.jpg" },
-  { name: "Laiba", role: "Alpha Ambassador", img: "src/assets/team/laiba.jpg" },
-  { name: "Maryam Sarfraz", role: "Alpha Ambassador", img: "src/assets/team/maryam sarfraz.jpg" },
-
-  { name: "Hamza Sajid", role: "Beta Ambassador", img: "src/assets/team/hamza sajid.jpg" },
-  { name: "Moazam", role: "Beta Ambassador", img: "src/assets/team/moazam.jpg" },
-  { name: "M. Ahmad", role: "Beta Ambassador", img: "src/assets/team/ahmed.jpg" },
-  { name: "Hamza Iftikhar", role: "Beta Ambassador", img: "src/assets/team/hamza ifthikar.jpg" },
+  { name: "Mohtashim Niaz", role: "Lead", img: "src/assets/team/mohtashim.jpeg" },
+  { name: "Muhammad Hasnain", role: "Community Manager", img: "src/assets/team/hasnain.jpeg" },
+  { name: "Rafia Mushtaq", role: "Co-Lead", img: "src/assets/team/rafia.jpeg" },
+  { name: "Burhan Abrar", role: "Ambassador Lead", img: "src/assets/team/burhan.jpeg" },
+  { name: "Faizan Anwar", role: "Operational Lead", img: "src/assets/team/faizan.jpeg" },
+  
 ];
 
 export default function Team() {
   return (
-    <div className="bg-[#010E1B] min-h-screen text-[#E1EFFD] px-6 sm:px-12 lg:px-24 py-20">
+    <div className="bg-[#010E1B] min-h-screen text-[#E1EFFD] px-6 sm:px-12 lg:px-24 py-15 sm:py-20">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-bold text-center text-[#55B4F3] md:mb-12 mt-10"
+        className="text-4xl font-bold text-center pb-6 sm:pb-0 text-[#55B4F3] md:mb-12 sm:mt-10 mt-5"
       >
         Our Team Members
       </motion.h1>
