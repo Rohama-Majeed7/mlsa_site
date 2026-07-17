@@ -6,7 +6,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#010E1B]/90 backdrop-blur-md border-b border-[#55B4F3]/20 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#010E1B]/90 backdrop-blur-md border-b border-[#55B4F3]/20 ">
       {/* Navbar Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4 flex justify-between items-center">
         {/* Logo */}
@@ -42,22 +42,23 @@ export default function Navbar() {
 
       {/* Mobile Slider Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-3/4 sm:w-2/3 bg-[#010E1B] shadow-xl border-r border-[#55B4F3]/20 z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-3/4 sm:w-2/3 bg-[#010E1B]  border-2 border-[#55B4F3]/20 bg-[#010E1B] border-r border-[#55B4F3]/20 z-40 transform transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col mt-16 py-3 space-y-6 px-6  bg-[#010E1B]">
+        <h2 className="text-2xl text-[#55B4F3] text-bold p-2">MLSA UET Taxila</h2>
+        <div className="flex flex-col mt-16 py-3 space-y-6 px-6 border-2 border-[#55B4F3]/20 bg-[#010E1B]">
           <MobileLink to="/" setOpen={setOpen}>Home</MobileLink>
           <MobileLink to="/events" setOpen={setOpen}>Events</MobileLink>
           <MobileLink to="/about" setOpen={setOpen}>About Us</MobileLink>
           <MobileLink to="/contact" setOpen={setOpen}>Contact</MobileLink>
-          <Link
+          {/* <Link
             to="/login"
             onClick={() => setOpen(false)}
             className="mt-4 px-6 py-2 rounded-full bg-[#55B4F3] text-[#010E1B] font-semibold shadow hover:scale-105 transition text-center"
           >
             Login
-          </Link>
+          </Link> */}
         </div>
       </div>
 

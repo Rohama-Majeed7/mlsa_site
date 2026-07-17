@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="bg-[#010E1B] text-[#E1EFFD]">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 sm:px-12 lg:px-24 bg-gradient-to-r from-[#021529] to-[#010E1B]">
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 sm:px-12 lg:px-24   mt-8 sm:mt-0">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,13 +47,13 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-[#55B4F3] cursor-pointer text-[#010E1B] px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition"
-          onClick={() => navigate("join")}
+          onClick={() => navigate("contact")}
         >
           Join Us
         </motion.button>
       </section>
       {/* What We Offer */}
-      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Latest Events */}
-      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Core Team (only 3 members) */}
-      <section className="sm:py-20 py-10 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

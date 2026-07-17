@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin } from "lucide-react";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-3 py-16 flex flex-col">
-
       {/* Heading Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -16,7 +15,8 @@ export default function Contact() {
           Get in Touch
         </h1>
         <p className="text-lg sm:text-xl mb-2">
-          Have something to share with us? Or looking for a potential collaboration?
+          Have something to share with us? Or looking for a potential
+          collaboration?
         </p>
         <p className="text-lg sm:text-xl">
           Get in touch with the minds behind MLSA-UET.
@@ -37,31 +37,38 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#55B4F3] mb-6 text-center md:text-left">
-            Send a Message
-          </h2>
-          <input
-            type="text"
-            placeholder="First Name"
-            className="w-full p-3 mb-4 rounded-lg bg-[#010E1B] text-[#E1EFFD] border border-[#55B4F3]/40 focus:border-[#55B4F3] focus:ring focus:ring-[#55B4F3]/20 outline-none transition text-lg"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 mb-4 rounded-lg bg-[#010E1B] text-[#E1EFFD] border border-[#55B4F3]/40 focus:border-[#55B4F3] focus:ring focus:ring-[#55B4F3]/20 outline-none transition text-lg"
-          />
-          <textarea
-            placeholder="Message"
-            className="w-full p-3 mb-4 rounded-lg bg-[#010E1B] text-[#E1EFFD] border border-[#55B4F3]/40 focus:border-[#55B4F3] focus:ring focus:ring-[#55B4F3]/20 outline-none transition h-40 resize-none text-lg"
-          ></textarea>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="submit"
-            className="w-full py-3 bg-[#55B4F3] text-[#010E1B] font-semibold rounded-lg shadow-lg hover:shadow-2xl transition text-lg"
+          <div className="text-center max-w-3xl mx-auto ">
+            <h2 className="text-xl font-bold text-[#55B4F3] mb-6">
+              Join MLSA UET Taxila
+            </h2>
+
+            <p className="text-lg text-[#E1EFFD]/80 leading-relaxed">
+              Interested in becoming part of MLSA UET Taxila? Fill out the form
+              and start your journey with us.
+            </p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mt-10"
           >
-            Send
-          </motion.button>
+            <h2 className="text-xl  font-bold text-[#55B4F3] mb-4">
+              Ready to Join?
+            </h2>
+
+            <a
+              href="https://forms.gle/YOUR_FORM_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 bg-[#55B4F3] text-[#010E1B] font-semibold rounded-2xl shadow-lg hover:scale-105 transition text-sm"
+            >
+              Fill the Form
+            </a>
+
+            <p className="mt-6 text-sm text-[#E1EFFD]/60">
+              After submission, our team will contact you with next steps.
+            </p>
+          </motion.div>
         </motion.form>
 
         {/* Contact Info Cards */}

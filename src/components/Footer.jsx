@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#010E1B] flex flex-col text-white pb-4 border-t border-[#55B4F3]/20">
-      <div className="w-max-7xl p-3 flex justify-between sm:flex-row flex-col gap-2 items-center ">
+    <footer className="bg-[#010E1B] w-full text-white pb-4 border-t border-[#55B4F3]/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
         {/* Logo / Title */}
-        <img src="src/assets/logo.png" alt="MLSA UET Taxila" className="w-24 h-24  " />
+        <img src="src/assets/logo.png" alt="MLSA UET Taxila" className="w-20 h-20  " />
 
         {/* Social Links */}
         <div className="flex justify-center space-x-8">
