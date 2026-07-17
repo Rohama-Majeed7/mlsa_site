@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
-import { coreTeam } from "./Team";
-import { events } from "./Events"; // adjust path if needed
-// Core Team Sample Data
+import { getEvents } from "../api/events";
+import { getTeamMembers } from "../api/team";
+import React from "react";
 
 const offers = [
   "MLSA Swags",
@@ -13,6 +13,33 @@ const offers = [
 ];
 export default function Home() {
   const navigate = useNavigate();
+  const [events, setEvents] = React.useState([]);
+  const [teamMembers, setTeamMembers] = React.useState([]);
+
+  React.useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await getEvents();
+        setEvents(response);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    };
+    fetchEvents();
+  }, []);
+
+  React.useEffect(() => {
+    const fetchTeamMembers = async () => {
+      try {
+        const response = await getTeamMembers();
+        setTeamMembers(response);
+      } catch (error) {
+        console.error("Error fetching team members:", error);
+      }
+    };
+
+    fetchTeamMembers();
+  }, []);
 
   return (
     <div className="bg-[#010E1B] text-[#E1EFFD]">
@@ -40,8 +67,12 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="max-w-xl text-center mb-6"
         >
-          MLSA UETT is a student community at UET Taxila focused on exploring Microsoft technologies and promoting personal and collective growth. It brings together Microsoft-selected ambassadors to collaborate on impactful initiatives for the local community. Through teamwork, members achieve more together than they could individually, unlocking greater opportunities and innovation.
-
+          MLSA UETT is a student community at UET Taxila focused on exploring
+          Microsoft technologies and promoting personal and collective growth.
+          It brings together Microsoft-selected ambassadors to collaborate on
+          impactful initiatives for the local community. Through teamwork,
+          members achieve more together than they could individually, unlocking
+          greater opportunities and innovation.
         </motion.p>
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -77,7 +108,11 @@ export default function Home() {
                 <motion.div
                   initial={{ y: 0 }}
                   animate={{ y: [0, -5, 0] }}
-                  transition={{ repeat: Infinity, duration: 2, delay: idx * 0.2 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    delay: idx * 0.2,
+                  }}
                 >
                   <CheckCircle className="text-[#55B4F3] w-10 h-10" />
                 </motion.div>
@@ -91,7 +126,11 @@ export default function Home() {
                 <motion.div
                   className="absolute -z-10 w-40 h-40 bg-[#55B4F3]/20 rounded-full top-[-10%] right-[-10%] blur-3xl"
                   animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ repeat: Infinity, duration: 4, delay: idx * 0.5 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    delay: idx * 0.5,
+                  }}
                 />
               </motion.div>
             ))}
@@ -120,7 +159,7 @@ export default function Home() {
               >
                 {/* Image */}
                 <img
-                  src={event.img}
+                  src={event.image}
                   alt={event.title}
                   className="h-48 w-full object-cover"
                 />
@@ -171,19 +210,19 @@ export default function Home() {
         >
           <h2 className="text-4xl font-bold text-[#55B4F3] mb-10">Core Team</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {coreTeam.slice(0, 3).map((member, idx) => (
+            {teamMembers.slice(0, 3).map((member, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
                 className="bg-[#021529] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition flex flex-col items-center"
               >
                 <img
-                  src={member.img}
+                  src={member.image }
                   alt={member.name}
                   className="w-50 h-50 rounded-2xl mb-4 object-cover border-4 border-[#55B4F3]"
                 />
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                <p className="text-[#E1EFFD]/80">{member.role}</p>
+                <p className="text-[#E1EFFD]/80">{member.designation}</p>
               </motion.div>
             ))}
           </div>
@@ -199,7 +238,6 @@ export default function Home() {
           </motion.button>
         </motion.div>
       </section>
-      
     </div>
   );
 }
