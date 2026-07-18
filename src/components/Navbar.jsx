@@ -42,11 +42,10 @@ export default function Navbar() {
 
       {/* Mobile Slider Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-3/4 sm:w-2/3 bg-[#010E1B]  border-2 border-[#55B4F3]/20 bg-[#010E1B] border-r border-[#55B4F3]/20 z-40 transform transition-transform duration-300 ease-in-out ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-3/4 sm:w-2/3 bg-[#010E1B]  border-2 border-[#55B4F3]/20 bg-[#010E1B] border-r border-[#55B4F3]/20 z-40 transform transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
-        <h2 className="text-2xl text-[#55B4F3] text-bold p-2">MLSA UET Taxila</h2>
+        {/* <h2 className="text-2xl text-[#55B4F3] text-bold ">MLSA UET Taxila</h2> */}
         <div className="flex flex-col mt-16 py-3 space-y-6 px-6 border-2 border-[#55B4F3]/20 bg-[#010E1B]">
           <MobileLink to="/" setOpen={setOpen}>Home</MobileLink>
           <MobileLink to="/events" setOpen={setOpen}>Events</MobileLink>
@@ -65,7 +64,7 @@ export default function Navbar() {
       {/* Overlay for mobile */}
       {open && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black/50 z-30"
+          className="fixed top-0 left-0 w-full h-full bg-black z-30"
           onClick={() => setOpen(false)}
         />
       )}

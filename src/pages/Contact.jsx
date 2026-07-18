@@ -25,7 +25,7 @@ export default function Contact() {
 
       {/* Contact Section */}
       <motion.div
-        className="flex flex-col-reverse md:flex-row items-start md:items-stretch justify-center gap-12 md:gap-20 max-w-6xl mx-auto w-full"
+        className="flex flex-col-reverse md:flex-row items-start md:items-stretch justify-center gap-6 md:gap-20 max-w-6xl mx-auto w-full"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
