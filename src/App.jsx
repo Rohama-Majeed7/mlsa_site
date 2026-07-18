@@ -4,7 +4,7 @@ import Events from "./pages/Events";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 // import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+// import Signup from "./pages/SignUp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Team from "./pages/Team";
@@ -13,22 +13,22 @@ import EventDetail from "./pages/EventDetail";
 function App() {
   return (
     <div className="bg-[#010E1B] ">
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/events/:id" element={<EventDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/join" element={<Join />} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/join" element={<Join />} />
 
-        {/* <Route path="/login" element={<Login />} /> */}
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+          {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route path="/signup" element={<Signup />} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
