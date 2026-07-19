@@ -19,7 +19,7 @@ export default function Events() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-4 py-16">
+    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-4 py-18">
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

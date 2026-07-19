@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { Lightbulb, Users, Trophy } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-
+// import { useNavigate } from "react-router-dom";
+import aboutImg from "../assets/about-section/about-us.jpeg";
+import advisorImg from "../assets/about-section/advisor.jpeg";
 export default function About() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <div className="bg-[#010E1B] text-[#E1EFFD] flex flex-col items-center">
 
@@ -18,7 +19,7 @@ export default function About() {
           className="w-full md:w-1/2 flex h-full justify-center"
         >
           <img
-            src="src/assets/about-section/about-us.jpeg"
+            src={aboutImg}
             alt="MLSA UETT"
             className="w-full rounded-3xl shadow-2xl border border-[#55B4F3]/20"
           />
@@ -51,7 +52,7 @@ export default function About() {
         <div className="w-full bg-gradient-to-r rounded-xl from-[#021529] to-[#031B33] rounded-[2px] shadow-2xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-12 border border-[#55B4F3]/20">
 
           <img
-            src="src/assets/about-section/advisor.jpeg"
+            src={advisorImg}
             alt="Advisor"
             className="w-40 h-40 md:w-70 rounded-[5px] md:h-70 object-cover border-2 hover:p-2 transition-all border-[#55B4F3] shadow-lg"
           />

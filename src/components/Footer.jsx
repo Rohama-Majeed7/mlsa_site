@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#010E1B] w-full text-white flex flex-col pb-4 border-t border-[#55B4F3]/20">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
         {/* Logo / Title */}
-        <img src="src/assets/logo.png" alt="MLSA UET Taxila" className="w-20 h-20  " />
+        <img src="/logo.png" alt="MLSA UET Taxila" className="w-20 h-20  " />
 
         {/* Social Links */}
         <div className="flex justify-center space-x-8">

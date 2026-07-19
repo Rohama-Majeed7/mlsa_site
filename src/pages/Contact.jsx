@@ -3,15 +3,15 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-3 py-16 flex flex-col">
+    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-3 py-18 flex flex-col">
       {/* Heading Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-3xl mx-auto mb-12"
+        className="text-center max-w-3xl mx-auto mb-10"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold text-[#55B4F3] md:mt-12 mb-4">
+        <h1 className="text-4xl sm:text-5xl font-bold text-[#55B4F3] md:mt-14 mb-3">
           Get in Touch
         </h1>
         <p className="text-lg sm:text-xl mb-2">

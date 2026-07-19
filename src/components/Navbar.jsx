@@ -12,9 +12,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           to="/"
-          className=""
+          className="relative z-50"
         >
-          <img src="src/assets/logo.png" alt="Logo" className="h-8 sm:h-10 md:h-16 " />
+          <img src="/logo.png" alt="Logo" className="h-8 sm:h-10 md:h-16 " />
         </Link>
 
         {/* Desktop Links */}
@@ -33,8 +33,11 @@ export default function Navbar() {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-[#55B4F3] focus:outline-none z-50"
+          className="md:hidden relative z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#E1EFFD] shadow-lg shadow-black/20 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#55B4F3]/50"
           onClick={() => setOpen(!open)}
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -42,29 +45,39 @@ export default function Navbar() {
 
       {/* Mobile Slider Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-3/4 sm:w-2/3 bg-[#010E1B]  border-2 border-[#55B4F3]/20 bg-[#010E1B] border-r border-[#55B4F3]/20 z-40 transform transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "-translate-x-full"
+        id="mobile-navigation"
+        className={`fixed inset-y-0 right-0 bg-[#010E1B] z-40 w-[min(90vw,20rem)] transform border-l border-white/10  transition-transform duration-300 ease-out md:hidden ${open ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        {/* <h2 className="text-2xl text-[#55B4F3] text-bold ">MLSA UET Taxila</h2> */}
-        <div className="flex flex-col mt-16 py-3 space-y-6 px-6 border-2 border-[#55B4F3]/20 bg-[#010E1B]">
-          <MobileLink to="/" setOpen={setOpen}>Home</MobileLink>
-          <MobileLink to="/events" setOpen={setOpen}>Events</MobileLink>
-          <MobileLink to="/about" setOpen={setOpen}>About Us</MobileLink>
-          <MobileLink to="/contact" setOpen={setOpen}>Contact</MobileLink>
-          {/* <Link
-            to="/login"
-            onClick={() => setOpen(false)}
-            className="mt-4 px-6 py-2 rounded-full bg-[#55B4F3] text-[#010E1B] font-semibold shadow hover:scale-105 transition text-center"
-          >
-            Login
-          </Link> */}
+        <div className="flex h-full flex-col mt-4 bg-[#010E1B] text-[#E1EFFD]">
+          <div className=" flex px-2 items-start justify-between border-b border-white/10 ">
+            <div>
+              <p className="text-lg uppercase tracking-[0.35em] font-bold text-[#55B4F3]/80">MLSA</p>
+              <h2 className="text-xl font-semibold text-white">UET Taxila</h2>
+            </div>
+            {/* <button
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10  text-[#E1EFFD] transition "
+              onClick={() => setOpen(false)}
+              aria-label="Close navigation menu"
+            >
+              <X size={20} />
+            </button> */}
+          </div>
+
+          <div className="bg-[#010E1B] p-2 flex flex-col gap-2 ">
+            <MobileLink to="/" setOpen={setOpen}>Home</MobileLink>
+            <MobileLink to="/events" setOpen={setOpen}>Events</MobileLink>
+            <MobileLink to="/about" setOpen={setOpen}>About Us</MobileLink>
+            <MobileLink to="/contact" setOpen={setOpen}>Contact</MobileLink>
+          </div>
+
         </div>
       </div>
 
       {/* Overlay for mobile */}
       {open && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black z-30"
+          className="fixed inset-0 z-30 bg-[#010E1B]/70 backdrop-blur-sm md:hidden"
           onClick={() => setOpen(false)}
         />
       )}
@@ -91,9 +104,10 @@ function MobileLink({ to, children, setOpen }) {
     <Link
       to={to}
       onClick={() => setOpen(false)}
-      className="block text-xl font-medium py-2 text-[#E1EFFD]/90 hover:text-[#55B4F3] transition"
+      className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-base font-medium text-[#E1EFFD]/90 transition hover:border-[#55B4F3]/40 hover:bg-[#55B4F3]/10 hover:text-white"
     >
-      {children}
+      <span>{children}</span>
+      <span className="text-[#55B4F3]/80">→</span>
     </Link>
   );
 }
