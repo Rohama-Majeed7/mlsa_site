@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div className="bg-[#010E1B] text-[#E1EFFD]">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 sm:px-12 lg:px-24   mt-8 sm:mt-0">
+      <section className="mt-8 flex min-h-screen flex-col items-center justify-center px-4 text-center sm:mt-0 sm:px-6 lg:px-10">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,25 +84,25 @@ export default function Home() {
         </motion.button>
       </section>
       {/* What We Offer */}
-      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="bg-[#010E1B] px-4 py-10 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
+          className="mx-auto w-full max-w-7xl text-center"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[#55B4F3] mb-14">
             What We Offer
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {offers.map((offer, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05, y: -4 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="flex items-center gap-4 p-6 bg-[#021529] rounded-2xl shadow-lg hover:shadow-2xl transition relative overflow-hidden"
+                className="relative  h-full min-h-[110px] w-full items-center gap-4 overflow-hidden rounded-xl bg-[#021529] p-4 text-left shadow-lg transition hover:shadow-2xl"
               >
                 {/* Floating icon effect */}
                 <motion.div
@@ -138,24 +138,24 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Latest Events */}
-      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="bg-[#010E1B] px-4 py-10 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto text-center"
+          className="mx-auto w-full max-w-7xl text-center"
         >
           <h2 className="text-4xl font-bold text-[#55B4F3] mb-12">
             Latest Events
           </h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {events.slice(0, 3).map((event, idx) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {events.reverse().slice(0, 3).map((event, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#021529] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition cursor-pointer flex flex-col"
+                className="flex h-full min-h-[330px] w-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-[#021529] shadow-lg transition hover:shadow-2xl"
               >
                 {/* Image */}
                 <img
@@ -165,7 +165,7 @@ export default function Home() {
                 />
 
                 {/* Content */}
-                <div className="p-5 flex flex-col flex-grow">
+                <div className="flex flex-grow flex-col p-5 text-left">
                   <h3 className="text-xl font-semibold mb-2 text-[#55B4F3]">
                     {event.title}
                   </h3>
@@ -200,26 +200,26 @@ export default function Home() {
         </motion.div>
       </section>
       {/* Core Team (only 3 members) */}
-      <section className="sm:py-10 py-5 px-3 sm:px-12 lg:px-24 bg-[#010E1B]">
+      <section className="bg-[#010E1B] px-4 py-10 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto text-center"
+          className="mx-auto w-full max-w-7xl text-center"
         >
           <h2 className="text-4xl font-bold text-[#55B4F3] mb-10">Core Team</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 3).map((member, idx) => (
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {teamMembers.reverse().slice(0, 3).map((member, idx) => (
               <motion.div
                 key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="bg-[#021529] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition flex flex-col items-center"
+                className="flex h-full min-h-[330px] w-full flex-col items-center rounded-2xl bg-[#021529] p-6 text-center shadow-lg transition hover:shadow-2xl"
               >
                 <img
                   src={member.image }
                   alt={member.name}
-                  className="w-50 h-50 rounded-2xl mb-4 object-cover border-4 border-[#55B4F3]"
+                  className="mb-4 aspect-square w-full max-w-[220px] rounded-2xl border-4 border-[#55B4F3] object-cover"
                 />
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                 <p className="text-[#E1EFFD]/80">{member.designation}</p>

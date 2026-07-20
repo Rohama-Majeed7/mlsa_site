@@ -1,3 +1,22 @@
 @import "tailwindcss";
 
+@layer base {
+	/* Standard responsive base type scale: mobile, tablet, large screens */
+	html {
+		font-size: 16px;
+	}
+
+	@media (min-width: 768px) {
+		html {
+			font-size: 17px;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		html {
+			font-size: 18px;
+		}
+	}
+}
+
 

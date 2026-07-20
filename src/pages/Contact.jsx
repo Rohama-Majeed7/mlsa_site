@@ -3,7 +3,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#010E1B] text-[#E1EFFD] sm:px-6 px-3 py-18 flex flex-col">
+    <div className="min-h-screen bg-[#010E1B] px-4 py-20 text-[#E1EFFD] sm:px-6 lg:px-10">
+      <div className="mx-auto flex w-full max-w-7xl flex-col">
       {/* Heading Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -25,14 +26,14 @@ export default function Contact() {
 
       {/* Contact Section */}
       <motion.div
-        className="flex flex-col-reverse md:flex-row items-start md:items-stretch justify-center gap-6 md:gap-20 max-w-6xl mx-auto w-full"
+        className="flex w-full flex-col-reverse items-stretch justify-center gap-6 md:flex-row md:gap-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
         {/* Contact Form */}
         <motion.form
-          className="flex-1 bg-[#021529] sm:p-8 p-3 rounded-2xl shadow-lg w-full max-w-md"
+          className="w-full flex-1 rounded-2xl bg-[#021529] p-4 shadow-lg sm:p-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
@@ -72,10 +73,10 @@ export default function Contact() {
         </motion.form>
 
         {/* Contact Info Cards */}
-        <motion.div className="flex-1 flex flex-col gap-6 w-full mb-6 md:mb-0">
+        <motion.div className="mb-6 flex w-full flex-1 flex-col gap-6 md:mb-0">
           {/* Email */}
           <motion.div
-            className="flex items-center gap-4 p-6 rounded-2xl border border-[#55B4F3]/40 hover:bg-[#021529] transition cursor-pointer shadow-md hover:shadow-xl"
+            className="flex h-full min-h-[140px] w-full cursor-pointer items-center gap-4 rounded-2xl border border-[#55B4F3]/40 p-6 shadow-md transition hover:bg-[#021529] hover:shadow-xl"
             whileHover={{ scale: 1.03 }}
           >
             <Mail className="text-[#55B4F3] w-8 h-8" />
@@ -87,7 +88,7 @@ export default function Contact() {
 
           {/* Phone */}
           <motion.div
-            className="flex items-center gap-4 p-6 rounded-2xl border border-[#55B4F3]/40 hover:bg-[#021529] transition cursor-pointer shadow-md hover:shadow-xl"
+            className="flex h-full min-h-[140px] w-full cursor-pointer items-center gap-4 rounded-2xl border border-[#55B4F3]/40 p-6 shadow-md transition hover:bg-[#021529] hover:shadow-xl"
             whileHover={{ scale: 1.03 }}
           >
             <Phone className="text-[#55B4F3] w-8 h-8" />
@@ -99,7 +100,7 @@ export default function Contact() {
 
           {/* Location */}
           <motion.div
-            className="flex items-center gap-4 p-6 rounded-2xl border border-[#55B4F3]/40 hover:bg-[#021529] transition cursor-pointer shadow-md hover:shadow-xl"
+            className="flex h-full min-h-[140px] w-full cursor-pointer items-center gap-4 rounded-2xl border border-[#55B4F3]/40 p-6 shadow-md transition hover:bg-[#021529] hover:shadow-xl"
             whileHover={{ scale: 1.03 }}
           >
             <MapPin className="text-[#55B4F3] w-8 h-8" />
@@ -110,6 +111,7 @@ export default function Contact() {
           </motion.div>
         </motion.div>
       </motion.div>
+      </div>
     </div>
   );
 }

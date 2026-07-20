@@ -46,8 +46,8 @@ export default function EventDetail() {
   const eventLink = event?.url || event?.link;
 
   return (
-    <div className="min-h-screen bg-[#010E1B] px-4 py-20 sm:py-16 text-[#E1EFFD] sm:px-6">
-      <div className="mx-auto max-w-5xl">
+    <div className="min-h-screen bg-[#010E1B] px-4 py-20 text-[#E1EFFD] sm:px-6 lg:px-10">
+      <div className="mx-auto w-full max-w-7xl">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -58,8 +58,32 @@ export default function EventDetail() {
         </button>
 
         {loading ? (
-          <div className="rounded-3xl border border-[#55B4F3]/20 bg-[#021529] p-8 text-center text-[#E1EFFD]/80">
-            Loading event details...
+          <div className="overflow-hidden rounded-3xl border border-[#55B4F3]/20 bg-[#021529] shadow-2xl">
+            <div className="h-72 w-full bg-[#0A2338] animate-pulse sm:h-96" />
+            <div className="space-y-4 p-3 sm:p-10">
+              <div className="h-4 w-28 rounded bg-[#0A2338] animate-pulse" />
+              <div className="h-10 w-3/4 rounded bg-[#0A2338] animate-pulse" />
+              <div className="h-4 w-full rounded bg-[#0A2338] animate-pulse" />
+              <div className="h-4 w-5/6 rounded bg-[#0A2338] animate-pulse" />
+              <div className="h-4 w-2/3 rounded bg-[#0A2338] animate-pulse" />
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {Array.from({ length: 2 }).map((_, idx) => (
+                  <div
+                    key={idx}
+                    className="h-full min-h-[96px] rounded-2xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <div className="h-4 w-20 rounded bg-[#0A2338] animate-pulse" />
+                    <div className="mt-3 h-4 w-24 rounded bg-[#0A2338] animate-pulse" />
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <div className="h-11 w-36 rounded-full bg-[#0A2338] animate-pulse" />
+                <div className="h-11 w-36 rounded-full bg-[#0A2338] animate-pulse" />
+              </div>
+            </div>
           </div>
         ) : error ? (
           <div className="rounded-3xl border border-red-400/30 bg-red-500/10 p-8 text-center text-red-100">
@@ -102,7 +126,7 @@ export default function EventDetail() {
 
               <div className="grid gap-4 sm:grid-cols-3">
                 {eventDate ? (
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="h-full min-h-[96px] rounded-2xl border border-white/10 bg-white/5 p-4">
                     <div className="mb-2 flex items-center gap-2 text-[#55B4F3]">
                       <CalendarDays className="h-4 w-4" />
                       <span className="text-sm font-semibold">Date</span>
@@ -112,7 +136,7 @@ export default function EventDetail() {
                 ) : null}
 
                 {eventLocation ? (
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div className="h-full min-h-[96px] rounded-2xl border border-white/10 bg-white/5 p-4">
                     <div className="mb-2 flex items-center gap-2 text-[#55B4F3]">
                       <MapPin className="h-4 w-4" />
                       <span className="text-sm font-semibold">Location</span>

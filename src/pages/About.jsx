@@ -9,7 +9,7 @@ export default function About() {
     <div className="bg-[#010E1B] text-[#E1EFFD] flex flex-col items-center">
 
       {/* ABOUT SECTION */}
-      <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row  gap-12 sm:pt-40 pt-22 sm:px-6 px-4 md:px-10">
+      <section className="mx-auto flex w-full max-w-7xl flex-col gap-12 px-4 pt-22 sm:px-6 sm:pt-40 lg:px-10 md:flex-row">
 
         {/* Image */}
         <motion.div
@@ -26,7 +26,7 @@ export default function About() {
         </motion.div>
 
         {/* Text */}
-        <div className="w-full flex flex-col justify-between pb-2 md:w-1/2 text-center md:text-left">
+        <div className="flex w-full flex-col justify-between pb-2 text-center md:w-1/2 md:text-left">
 
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-[#55B4F3] ">
             About Us
@@ -47,9 +47,9 @@ export default function About() {
       </section>
 
       {/* ADVISOR SECTION */}
-      <section className="w-full max-w-6xl  mx-auto py-20 px-4 md:px-1 flex justify-center">
+      <section className="mx-auto flex w-full max-w-7xl justify-center px-4 py-20 sm:px-6 lg:px-10">
 
-        <div className="w-full bg-gradient-to-r rounded-xl from-[#021529] to-[#031B33] rounded-[2px] shadow-2xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-12 border border-[#55B4F3]/20">
+        <div className="flex w-full flex-col items-center gap-12 rounded-xl border border-[#55B4F3]/20 bg-gradient-to-r from-[#021529] to-[#031B33] p-10 shadow-2xl md:flex-row md:p-14">
 
           <img
             src={advisorImg}
@@ -76,7 +76,7 @@ export default function About() {
       </section>
 
       {/* VISION & MISSION */}
-      <section className="w-full flex flex-col gap-4 max-w-6xl mx-auto md:py-10 sm:px-6 px-4 md:px-10  ">
+      <section className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-4 md:py-10 sm:px-6 lg:px-10">
 
         <div className="text-center flex flex-col md:gap-10 gap-5">
 
@@ -102,29 +102,29 @@ export default function About() {
         </div>
 
        {/* CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 my-4 md:grid-cols-3 gap-10">
+        <div className="my-4 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
 
           {/* Card */}
-          <div className="p-6 bg-[#021529] rounded-2xl text-center shadow-lg hover:scale-105 transition">
+          <div className=" h-full min-h-[200px] w-full flex-col rounded-xl bg-[#021529] p-6 text-center shadow-lg transition hover:scale-105">
             <Lightbulb className="w-12 h-12 mx-auto text-[#55B4F3] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Opportunity to Learn</h3>
-            <p className="text-[#E1EFFD]/80 text-sm">
+            <p className="mt-auto text-sm text-[#E1EFFD]/80">
               Workshops, mentorship, and continuous learning.
             </p>
           </div>
 
-          <div className="p-6 bg-[#021529] rounded-2xl text-center shadow-lg hover:scale-105 transition">
+          <div className="h-full min-h-[200px] w-full flex-col rounded-2xl bg-[#021529] p-6 text-center shadow-lg transition hover:scale-105">
             <Users className="w-12 h-12 mx-auto text-[#55B4F3] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Inclusive Community</h3>
-            <p className="text-[#E1EFFD]/80 text-sm">
+            <p className="mt-auto text-sm text-[#E1EFFD]/80">
               Collaboration and inclusivity for shared success.
             </p>
           </div>
 
-          <div className="p-6 bg-[#021529] rounded-2xl text-center shadow-lg hover:scale-105 transition">
+          <div className="h-full min-h-[200px] w-full flex-col rounded-2xl bg-[#021529] p-6 text-center shadow-lg transition hover:scale-105">
             <Trophy className="w-12 h-12 mx-auto text-[#55B4F3] mb-4" />
             <h3 className="text-xl font-semibold mb-2">Commitment to Produce</h3>
-            <p className="text-[#E1EFFD]/80 text-sm">
+            <p className="mt-auto text-sm text-[#E1EFFD]/80">
               Building impactful tech projects and contributions.
             </p>
           </div>
