@@ -7,9 +7,8 @@ export default function Footer() {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-8">
-          <FooterLink href="#">Facebook</FooterLink>
-          <FooterLink href="#">Instagram</FooterLink>
-          <FooterLink href="#">LinkedIn</FooterLink>
+          <FooterLink href="https://www.instagram.com/mlsa_uett?igsh=ZHdmNnk3dWo3aDk0">Instagram</FooterLink>
+          <FooterLink href="https://www.linkedin.com/company/mlsa-uett">LinkedIn</FooterLink>
         </div>
       </div>
       {/* Divider */}

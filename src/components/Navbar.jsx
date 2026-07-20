@@ -33,7 +33,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden relative z-50 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#E1EFFD] shadow-lg shadow-black/20 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#55B4F3]/50"
+          className="md:hidden relative z-70 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#E1EFFD] shadow-lg shadow-black/20 backdrop-blur-md transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#55B4F3]/50"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
@@ -46,11 +46,11 @@ export default function Navbar() {
       {/* Mobile Slider Menu */}
       <div
         id="mobile-navigation"
-        className={`fixed inset-y-0 right-0 bg-[#010E1B] z-40 w-[min(90vw,20rem)] transform border-l border-white/10  transition-transform duration-300 ease-out md:hidden ${open ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-y-0 right-0 bg-[#010E1B] z-60 w-[min(88vw,30rem)] transform border-l border-white/10 rounded-l-2xl  transition-transform duration-300 ease-out md:hidden ${open ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        <div className="flex h-full flex-col mt-4 bg-[#010E1B] text-[#E1EFFD]">
-          <div className=" flex px-2 items-start justify-between border-b border-white/10 ">
+        <div className="flex h-full rounded-b-2xl flex-col mt-4 bg-[#010E1B] text-[#E1EFFD]">
+          <div className=" flex px-2 items-start justify-between rounded-b-2xl border-b border-white/10 ">
             <div>
               <p className="text-lg uppercase tracking-[0.35em] font-bold text-[#55B4F3]/80">MLSA</p>
               <h2 className="text-xl font-semibold text-white">UET Taxila</h2>
@@ -64,7 +64,7 @@ export default function Navbar() {
             </button> */}
           </div>
 
-          <div className="bg-[#010E1B] p-2 flex flex-col gap-2 ">
+          <div className="bg-[#010E1B] p-2 flex flex-col gap-2 rounded-b-2xl">
             <MobileLink to="/" setOpen={setOpen}>Home</MobileLink>
             <MobileLink to="/events" setOpen={setOpen}>Events</MobileLink>
             <MobileLink to="/about" setOpen={setOpen}>About Us</MobileLink>

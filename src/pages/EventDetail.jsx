@@ -22,7 +22,7 @@ export default function EventDetail() {
         if (isMounted) {
           setEvent(response);
         }
-      } catch (fetchError) {
+      } catch {
         if (isMounted) {
           setError("We could not load this event right now.");
         }
@@ -46,7 +46,7 @@ export default function EventDetail() {
   const eventLink = event?.url || event?.link;
 
   return (
-    <div className="min-h-screen bg-[#010E1B] px-4 py-16 text-[#E1EFFD] sm:px-6">
+    <div className="min-h-screen bg-[#010E1B] px-4 py-20 sm:py-16 text-[#E1EFFD] sm:px-6">
       <div className="mx-auto max-w-5xl">
         <button
           type="button"
@@ -86,7 +86,7 @@ export default function EventDetail() {
               />
             ) : null}
 
-            <div className="space-y-6 p-6 sm:p-10">
+            <div className="space-y-4 p-3 sm:p-10 text-justify">
               <div>
                 <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-[#55B4F3]/80">
                   Event Details
@@ -121,25 +121,10 @@ export default function EventDetail() {
                   </div>
                 ) : null}
 
-                {eventLink ? (
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <div className="mb-2 flex items-center gap-2 text-[#55B4F3]">
-                      <LinkIcon className="h-4 w-4" />
-                      <span className="text-sm font-semibold">More info</span>
-                    </div>
-                    <a
-                      href={eventLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-[#E1EFFD]/80 hover:text-white hover:underline"
-                    >
-                      Open event link
-                    </a>
-                  </div>
-                ) : null}
+                
               </div>
 
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 ">
                 <Link
                   to="/events"
                   className="rounded-full bg-[#55B4F3] px-5 py-3 text-sm font-semibold text-[#010E1B] transition hover:shadow-lg"

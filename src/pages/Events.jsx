@@ -50,7 +50,7 @@ export default function Events() {
           <motion.div
             key={idx}
             whileHover={{ scale: 1.05 }}
-            className="bg-[#021529] rounded-xl shadow-lg overflow-hidden relative border border-[#55B4F3]/20 transition cursor-pointer"
+            className="bg-[#021529] rounded-xl text-justify shadow-lg overflow-hidden relative border border-[#55B4F3]/20 transition cursor-pointer"
           >
             {/* Image */}
             <img
